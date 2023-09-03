@@ -55,7 +55,7 @@ app.put("/users/:id", async (request, response) => {
   userToUpdate.name = body.name;
   userToUpdate.title = body.title;
 
-  await fs.writeFile("data.json", JSON.stringify(users));
+  fs.writeFile("data.json", JSON.stringify(users));
   response.json(users);
 });
 
